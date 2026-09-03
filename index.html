@@ -1,0 +1,1862 @@
+<!doctype html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Łukasz Dyłka — Psycholog & Pedagog</title>
+
+    <!-- ★ FAVICON -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌿</text></svg>" />
+
+    <!-- ★ SEO & OPEN GRAPH -->
+    <meta name="description" content="Łukasz Dyłka — psycholog i pedagog ze Świętochłowic. Sesje psychologiczne online. Magister psychologii i pedagogiki, spec. psychoterapia i diagnoza kliniczna. Umów wizytę." />
+    <meta name="author" content="Łukasz Dyłka" />
+    <meta name="robots" content="index, follow" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Łukasz Dyłka — Psycholog & Pedagog" />
+    <meta property="og:description" content="Psycholog i pedagog ze Świętochłowic. Sesje online — bezpieczna przestrzeń do pracy nad sobą. Umów pierwszą wizytę." />
+    <meta property="og:url" content="https://dylka.pl" />
+    <meta property="og:locale" content="pl_PL" />
+    <!-- og:image: odkomentuj i podaj URL grafiki 1200×630px, żeby FB/LinkedIn pokazało miniaturę -->
+    <!-- <meta property="og:image" content="https://dylka.pl/og-image.jpg" /> -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Łukasz Dyłka — Psycholog & Pedagog" />
+    <meta name="twitter:description" content="Psycholog i pedagog ze Świętochłowic. Sesje online. Umów wizytę." />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      :root {
+        --ink: #1a1d16;
+        --sage: #5d7153;
+        --sage-l: #7a9470;
+        --sage-pale: #e8f0e4;
+        --cream: #f3ede2;
+        --warm: #ebe3d2;
+        --muted: #787268;
+        --white: #fdfaf4;
+        --er-bg: #18191a;
+        --er-gold: #c9a84c;
+        --er-gold-l: #e0c278;
+        --accent: #9e7d52;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+      body {
+        background: var(--white);
+        color: var(--ink);
+        font-family: "DM Sans", sans-serif;
+        font-weight: 300;
+        line-height: 1.75;
+        overflow-x: hidden;
+      }
+
+      /* ── NAV ── */
+      nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 300;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 1rem 5rem;
+        background: rgba(253, 250, 244, 0.93);
+        backdrop-filter: blur(16px);
+        border-bottom: 1px solid rgba(93, 113, 83, 0.12);
+        transition:
+          padding 0.3s,
+          box-shadow 0.3s;
+      }
+      nav.scrolled {
+        padding: 0.65rem 5rem;
+        box-shadow: 0 4px 24px rgba(0, 0, 0, 0.06);
+      }
+
+      .nav-logo {
+        font-family: "Cormorant Garamond", serif;
+        font-size: 1.2rem;
+        font-weight: 400;
+        letter-spacing: 0.05em;
+        color: var(--ink);
+        text-decoration: none;
+      }
+      .nav-logo em {
+        color: var(--sage);
+        font-style: italic;
+      }
+
+      .nav-center {
+        display: flex;
+        gap: 0;
+        list-style: none;
+        background: rgba(93, 113, 83, 0.08);
+        border-radius: 2rem;
+        padding: 0.25rem;
+      }
+      .nav-center a {
+        font-size: 0.74rem;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: var(--muted);
+        text-decoration: none;
+        padding: 0.45rem 1.1rem;
+        border-radius: 1.5rem;
+        transition:
+          background 0.2s,
+          color 0.2s;
+        white-space: nowrap;
+      }
+      .nav-center a:hover,
+      .nav-center a.active {
+        background: var(--sage);
+        color: #fff;
+      }
+
+      .nav-cta {
+        font-size: 0.76rem;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        background: var(--ink);
+        color: #fff;
+        padding: 0.5rem 1.3rem;
+        border-radius: 2rem;
+        text-decoration: none;
+        transition:
+          background 0.2s,
+          transform 0.15s;
+        white-space: nowrap;
+      }
+      .nav-cta:hover {
+        background: var(--sage);
+        transform: translateY(-1px);
+      }
+
+      .hamburger {
+        display: none;
+        flex-direction: column;
+        gap: 5px;
+        cursor: pointer;
+        background: none;
+        border: none;
+        padding: 4px;
+      }
+      .hamburger span {
+        display: block;
+        width: 22px;
+        height: 2px;
+        background: var(--ink);
+        border-radius: 2px;
+      }
+
+      /* ── HERO ── */
+      #hero {
+        min-height: 100vh;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+        padding: 8rem 5rem 5rem;
+        background: var(--white);
+        position: relative;
+        overflow: hidden;
+      }
+      .hero-bg {
+        position: absolute;
+        inset: 0;
+        z-index: 0;
+        pointer-events: none;
+        background:
+          radial-gradient(
+            ellipse 60% 70% at 72% 30%,
+            rgba(93, 113, 83, 0.09) 0%,
+            transparent 65%
+          ),
+          radial-gradient(
+            ellipse 40% 50% at 20% 80%,
+            rgba(158, 125, 82, 0.07) 0%,
+            transparent 60%
+          );
+      }
+      .hero-blob {
+        position: absolute;
+        right: -6%;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 600px;
+        height: 600px;
+        z-index: 0;
+        background: radial-gradient(
+          ellipse at 42% 50%,
+          rgba(93, 113, 83, 0.11) 0%,
+          transparent 65%
+        );
+        border-radius: 62% 38% 54% 46%/46% 54% 46% 54%;
+        animation: blob 10s ease-in-out infinite;
+      }
+      @keyframes blob {
+        0%,
+        100% {
+          border-radius: 62% 38% 54% 46%/46% 54% 46% 54%;
+          transform: translateY(-50%) scale(1);
+        }
+        50% {
+          border-radius: 46% 54% 38% 62%/54% 46% 54% 46%;
+          transform: translateY(-52%) scale(1.03);
+        }
+      }
+
+      .hero-left {
+        position: relative;
+        z-index: 1;
+        padding-right: 4rem;
+      }
+      .hero-eyebrow {
+        font-size: 0.7rem;
+        letter-spacing: 0.24em;
+        text-transform: uppercase;
+        color: var(--sage);
+        margin-bottom: 1.4rem;
+      }
+      .hero-name {
+        font-family: "Cormorant Garamond", serif;
+        font-size: clamp(4rem, 7vw, 6.5rem);
+        font-weight: 300;
+        line-height: 0.95;
+        color: var(--ink);
+        margin-bottom: 1.8rem;
+      }
+      .hero-name em {
+        color: var(--sage);
+        font-style: italic;
+        display: block;
+      }
+      .hero-roles {
+        display: flex;
+        flex-direction: column;
+        gap: 0.4rem;
+        margin-bottom: 2.2rem;
+      }
+      .hero-role {
+        display: flex;
+        align-items: center;
+        gap: 0.8rem;
+        font-size: 0.95rem;
+        color: var(--muted);
+      }
+      .hero-role::before {
+        content: "";
+        display: block;
+        width: 24px;
+        height: 1px;
+        background: var(--sage);
+        flex-shrink: 0;
+      }
+      .hero-role strong {
+        color: var(--ink);
+        font-weight: 400;
+      }
+      .hero-buttons {
+        display: flex;
+        gap: 0.9rem;
+        flex-wrap: wrap;
+        margin-top: 2.4rem;
+      }
+      .btn-primary {
+        background: var(--ink);
+        color: #fff;
+        padding: 0.85rem 2rem;
+        border-radius: 2rem;
+        text-decoration: none;
+        font-size: 0.8rem;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        transition:
+          background 0.2s,
+          transform 0.15s;
+      }
+      .btn-primary:hover {
+        background: var(--sage);
+        transform: translateY(-2px);
+      }
+      .btn-outline {
+        border: 1px solid rgba(93, 113, 83, 0.4);
+        color: var(--sage);
+        padding: 0.85rem 2rem;
+        border-radius: 2rem;
+        text-decoration: none;
+        font-size: 0.8rem;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        transition:
+          background 0.2s,
+          color 0.2s;
+      }
+      .btn-outline:hover {
+        background: var(--sage);
+        color: #fff;
+      }
+
+      .hero-right {
+        position: relative;
+        z-index: 1;
+        display: flex;
+        justify-content: center;
+      }
+      .id-card {
+        background: var(--warm);
+        border-radius: 2rem;
+        padding: 2.5rem;
+        width: 100%;
+        max-width: 380px;
+        box-shadow:
+          0 24px 64px rgba(26, 29, 22, 0.1),
+          0 4px 16px rgba(93, 113, 83, 0.1);
+      }
+      .id-card-top {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        padding-bottom: 1.5rem;
+        border-bottom: 1px solid rgba(93, 113, 83, 0.15);
+        margin-bottom: 1.5rem;
+      }
+      /* Zdjęcie profilowe w karcie */
+      .id-photo {
+        width: 120px; height: 120px; border-radius: 50%;
+        object-fit: cover; object-position: center top;
+        border: 4px solid var(--white);
+        box-shadow: 0 8px 32px rgba(26,29,22,0.15), 0 0 0 2px rgba(93,113,83,0.2);
+        display: block;
+      }
+      .id-photo-fallback {
+        width: 120px; height: 120px; border-radius: 50%;
+        background: linear-gradient(135deg, var(--sage), var(--sage-l));
+        display: none; align-items: center; justify-content: center;
+        font-family: "Cormorant Garamond", serif;
+        font-size: 2.4rem; color: #fff; font-weight: 300;
+        border: 4px solid var(--white);
+        box-shadow: 0 8px 32px rgba(26,29,22,0.15), 0 0 0 2px rgba(93,113,83,0.2);
+      }
+      .id-avatar {
+        width: 56px;
+        height: 56px;
+        border-radius: 50%;
+        background: linear-gradient(135deg, var(--sage), var(--sage-l));
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: "Cormorant Garamond", serif;
+        font-size: 1.5rem;
+        color: #fff;
+        font-weight: 600;
+        flex-shrink: 0;
+      }
+      .id-name {
+        font-family: "Cormorant Garamond", serif;
+        font-size: 1.3rem;
+        font-weight: 600;
+        color: var(--ink);
+        line-height: 1.1;
+      }
+      .id-sub {
+        font-size: 0.78rem;
+        color: var(--muted);
+        margin-top: 0.2rem;
+      }
+      .id-rows {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+      }
+      .id-row-label {
+        font-size: 0.65rem;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        color: var(--sage);
+        margin-bottom: 0.2rem;
+      }
+      .id-row-val {
+        font-size: 0.88rem;
+        color: var(--ink);
+        line-height: 1.5;
+      }
+      .id-tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.4rem;
+        margin-top: 1.4rem;
+        padding-top: 1.4rem;
+        border-top: 1px solid rgba(93, 113, 83, 0.15);
+      }
+      .id-tag {
+        font-size: 0.67rem;
+        letter-spacing: 0.09em;
+        text-transform: uppercase;
+        border: 1px solid rgba(93, 113, 83, 0.35);
+        color: var(--sage);
+        padding: 0.26rem 0.75rem;
+        border-radius: 2rem;
+      }
+
+      /* ── ZONE DIVIDER ── */
+      .zone-divider {
+        display: flex;
+        align-items: center;
+        gap: 1.5rem;
+        padding: 1.5rem 5rem;
+        background: var(--white);
+      }
+      .zone-divider-line {
+        flex: 1;
+        height: 1px;
+        background: rgba(93, 113, 83, 0.15);
+      }
+      .zone-divider-label {
+        font-size: 0.68rem;
+        letter-spacing: 0.22em;
+        text-transform: uppercase;
+        color: var(--sage);
+        white-space: nowrap;
+        padding: 0.35rem 1.2rem;
+        border: 1px solid rgba(93, 113, 83, 0.25);
+        border-radius: 2rem;
+      }
+
+      /* ── SHARED ── */
+      .section-pad {
+        padding: 5.5rem 5rem;
+      }
+      .s-eyebrow {
+        font-size: 0.68rem;
+        letter-spacing: 0.22em;
+        text-transform: uppercase;
+        color: var(--sage);
+        margin-bottom: 0.8rem;
+      }
+      .s-title {
+        font-family: "Cormorant Garamond", serif;
+        font-size: clamp(2rem, 3.5vw, 2.9rem);
+        font-weight: 300;
+        line-height: 1.12;
+        color: var(--ink);
+      }
+      .s-title em {
+        font-style: italic;
+        color: var(--sage);
+      }
+      .s-body {
+        font-size: 0.96rem;
+        color: #3a3a31;
+        line-height: 1.9;
+      }
+
+      /* ── WYKSZTAŁCENIE ── */
+      #edu {
+        background: var(--cream);
+      }
+      .edu-wrap {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 4rem;
+        align-items: start;
+      }
+      .edu-intro {
+        margin-top: 1.2rem;
+      }
+      .degree-group {
+        margin-top: 2rem;
+      }
+      .degree-group-title {
+        font-size: 0.68rem;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        color: var(--sage);
+        margin-bottom: 1rem;
+        display: flex;
+        align-items: center;
+        gap: 0.7rem;
+      }
+      .degree-group-title::after {
+        content: "";
+        flex: 1;
+        height: 1px;
+        background: rgba(93, 113, 83, 0.2);
+      }
+      .degree-cards {
+        display: flex;
+        flex-direction: column;
+        gap: 0.8rem;
+      }
+      .degree-card {
+        background: var(--white);
+        border-radius: 1rem;
+        padding: 1.1rem 1.4rem;
+        border-left: 3px solid var(--sage-l);
+        display: grid;
+        grid-template-columns: 1fr auto;
+        align-items: start;
+        gap: 0.5rem;
+      }
+      .degree-card.degree-main {
+        border-left-color: var(--sage);
+        border-left-width: 4px;
+      }
+      .degree-title {
+        font-family: "Cormorant Garamond", serif;
+        font-size: 1.05rem;
+        font-weight: 600;
+        color: var(--ink);
+      }
+      .degree-school {
+        font-size: 0.8rem;
+        color: var(--muted);
+        margin-top: 0.15rem;
+        line-height: 1.4;
+      }
+      .degree-year {
+        font-size: 0.74rem;
+        color: var(--sage);
+        font-weight: 500;
+        white-space: nowrap;
+      }
+
+      /* ── DOŚWIADCZENIE ── */
+      #experience {
+        background: var(--white);
+      }
+      .exp-wrap {
+        display: grid;
+        grid-template-columns: 38% 1fr;
+        gap: 5rem;
+        align-items: start;
+      }
+      .exp-intro-body {
+        margin-top: 1.2rem;
+      }
+      .exp-cv-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.6rem;
+        margin-top: 1.8rem;
+        border: 1px solid rgba(93, 113, 83, 0.3);
+        color: var(--sage);
+        padding: 0.7rem 1.6rem;
+        border-radius: 2rem;
+        text-decoration: none;
+        font-size: 0.78rem;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        transition:
+          background 0.2s,
+          color 0.2s,
+          transform 0.15s;
+      }
+      .exp-cv-btn:hover {
+        background: var(--sage);
+        color: #fff;
+        transform: translateY(-1px);
+      }
+      .exp-timeline {
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+      }
+      .tl-item {
+        position: relative;
+        padding-left: 1.6rem;
+        padding-bottom: 1.8rem;
+        border-left: 1px solid rgba(93, 113, 83, 0.25);
+      }
+      .tl-item:last-child {
+        border-left: 1px solid transparent;
+        padding-bottom: 0;
+      }
+      .tl-item::before {
+        content: "";
+        position: absolute;
+        left: -5px;
+        top: 6px;
+        width: 9px;
+        height: 9px;
+        background: var(--sage);
+        border-radius: 50%;
+        box-shadow: 0 0 0 3px rgba(93, 113, 83, 0.15);
+      }
+      .tl-item.tl-now::before {
+        background: var(--accent);
+        box-shadow: 0 0 0 3px rgba(158, 125, 82, 0.2);
+      }
+      .tl-year {
+        font-size: 0.68rem;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        color: var(--sage);
+        margin-bottom: 0.2rem;
+      }
+      .tl-title {
+        font-family: "Cormorant Garamond", serif;
+        font-size: 1.1rem;
+        font-weight: 600;
+        color: var(--ink);
+        line-height: 1.2;
+      }
+      .tl-where {
+        font-size: 0.83rem;
+        color: var(--muted);
+        margin-top: 0.15rem;
+        line-height: 1.5;
+      }
+      .tl-badge {
+        display: inline-block;
+        margin-top: 0.35rem;
+        font-size: 0.63rem;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        background: rgba(158, 125, 82, 0.13);
+        color: var(--accent);
+        padding: 0.14rem 0.55rem;
+        border-radius: 1rem;
+      }
+
+      /* ── NARZĘDZIA ── */
+      #tools {
+        background: var(--sage-pale);
+      }
+      .tools-header {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 3rem;
+        align-items: end;
+        margin-bottom: 2.8rem;
+      }
+      .tools-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.2rem;
+      }
+      .tool-card {
+        background: var(--white);
+        border-radius: 1.3rem;
+        padding: 1.8rem;
+        text-decoration: none;
+        color: var(--ink);
+        display: flex;
+        flex-direction: column;
+        gap: 0.8rem;
+        position: relative;
+        overflow: hidden;
+        transition:
+          transform 0.25s,
+          box-shadow 0.25s;
+        border: 1px solid rgba(93, 113, 83, 0.1);
+      }
+      .tool-card::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 3px;
+        background: linear-gradient(90deg, var(--sage), var(--sage-l));
+        transform: scaleX(0);
+        transform-origin: left;
+        transition: transform 0.3s;
+      }
+      .tool-card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 16px 40px rgba(26, 29, 22, 0.1);
+      }
+      .tool-card:hover::before {
+        transform: scaleX(1);
+      }
+      .tool-ghost {
+        background: transparent;
+        border: 1.5px dashed rgba(93, 113, 83, 0.25);
+        cursor: default;
+      }
+      .tool-ghost:hover {
+        transform: none !important;
+        box-shadow: none !important;
+      }
+      .tool-icon {
+        width: 46px;
+        height: 46px;
+        border-radius: 0.8rem;
+        background: rgba(93, 113, 83, 0.12);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.4rem;
+      }
+      .tool-ghost .tool-icon {
+        background: rgba(93, 113, 83, 0.06);
+      }
+      .tool-name {
+        font-family: "Cormorant Garamond", serif;
+        font-size: 1.35rem;
+        font-weight: 600;
+      }
+      .tool-ghost .tool-name {
+        color: var(--muted);
+      }
+      .tool-desc {
+        font-size: 0.83rem;
+        color: var(--muted);
+        line-height: 1.65;
+      }
+      .tool-link {
+        margin-top: auto;
+        font-size: 0.73rem;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: var(--sage);
+        display: flex;
+        align-items: center;
+        gap: 0.3rem;
+      }
+      .tool-link::after {
+        content: "→";
+        transition: transform 0.2s;
+      }
+      .tool-card:hover .tool-link::after {
+        transform: translateX(4px);
+      }
+
+      /* ── WIZYTA ── */
+      #booking {
+        background: var(--white);
+      }
+      .booking-wrap {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 5rem;
+        align-items: start;
+      }
+      .booking-body {
+        font-size: 0.96rem;
+        color: #3a3a31;
+        line-height: 1.9;
+        margin-top: 1.2rem;
+        margin-bottom: 1.8rem;
+      }
+      .contact-list {
+        display: flex;
+        flex-direction: column;
+        gap: 0.8rem;
+        margin-bottom: 2rem;
+      }
+      .contact-item {
+        display: flex;
+        align-items: flex-start;
+        gap: 0.9rem;
+        font-size: 0.9rem;
+        color: var(--muted);
+      }
+      .contact-icon {
+        color: var(--sage);
+        flex-shrink: 0;
+        width: 18px;
+        text-align: center;
+        margin-top: 0.1rem;
+      }
+      .social-row {
+        display: flex;
+        gap: 0.6rem;
+        flex-wrap: wrap;
+      }
+      .soc-pill {
+        font-size: 0.72rem;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        border: 1px solid rgba(93, 113, 83, 0.3);
+        color: var(--sage);
+        padding: 0.32rem 0.85rem;
+        border-radius: 2rem;
+        text-decoration: none;
+        transition:
+          background 0.2s,
+          color 0.2s;
+      }
+      .soc-pill:hover {
+        background: var(--sage);
+        color: #fff;
+      }
+      .widget-box {
+        background: var(--cream);
+        border-radius: 1.5rem;
+        padding: 3rem;
+        min-height: 320px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        border: 1px solid rgba(93, 113, 83, 0.12);
+      }
+      .widget-ico {
+        font-size: 2.2rem;
+        margin-bottom: 1rem;
+      }
+      .widget-ttl {
+        font-family: "Cormorant Garamond", serif;
+        font-size: 1.6rem;
+        font-weight: 600;
+        color: var(--ink);
+        margin-bottom: 0.5rem;
+      }
+      .widget-hint {
+        font-size: 0.82rem;
+        color: var(--muted);
+        line-height: 1.6;
+      }
+      .widget-code {
+        display: inline-block;
+        margin-top: 0.8rem;
+        font-size: 0.7rem;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        background: rgba(93, 113, 83, 0.1);
+        color: var(--sage);
+        padding: 0.3rem 0.85rem;
+        border-radius: 1rem;
+      }
+
+      /* ── FAMILOCK ── */
+      #familock {
+        background: var(--er-bg);
+        color: #e6ddc8;
+        padding: 6rem 5rem;
+        position: relative;
+        overflow: hidden;
+      }
+      .er-ambient {
+        position: absolute;
+        inset: 0;
+        pointer-events: none;
+        background:
+          radial-gradient(
+            ellipse 55% 65% at 85% 15%,
+            rgba(201, 168, 76, 0.08) 0%,
+            transparent 60%
+          ),
+          radial-gradient(
+            ellipse 35% 45% at 8% 85%,
+            rgba(201, 168, 76, 0.05) 0%,
+            transparent 55%
+          );
+      }
+      .er-grid-lines {
+        position: absolute;
+        inset: 0;
+        pointer-events: none;
+        opacity: 0.035;
+        background-image:
+          repeating-linear-gradient(
+            0deg,
+            #c9a84c 0,
+            #c9a84c 1px,
+            transparent 0,
+            transparent 60px
+          ),
+          repeating-linear-gradient(
+            90deg,
+            #c9a84c 0,
+            #c9a84c 1px,
+            transparent 0,
+            transparent 60px
+          );
+      }
+      .er-zone-label {
+        position: relative;
+        z-index: 1;
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        margin-bottom: 3.5rem;
+      }
+      .er-zone-label-text {
+        font-size: 0.66rem;
+        letter-spacing: 0.24em;
+        text-transform: uppercase;
+        color: rgba(201, 168, 76, 0.6);
+        white-space: nowrap;
+      }
+      .er-zone-label-line {
+        flex: 1;
+        height: 1px;
+        background: rgba(201, 168, 76, 0.15);
+      }
+      .familock-wrap {
+        position: relative;
+        z-index: 1;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 5rem;
+        align-items: start;
+      }
+      .er-eyebrow {
+        font-size: 0.68rem;
+        letter-spacing: 0.22em;
+        text-transform: uppercase;
+        color: var(--er-gold);
+        margin-bottom: 1rem;
+      }
+      .er-title {
+        font-family: "Cormorant Garamond", serif;
+        font-size: clamp(2.4rem, 4vw, 3.5rem);
+        font-weight: 300;
+        line-height: 1.08;
+        color: #f0e6cc;
+        margin-bottom: 1.4rem;
+      }
+      .er-title em {
+        font-style: italic;
+        color: var(--er-gold);
+      }
+      .er-body {
+        font-size: 0.94rem;
+        color: rgba(230, 221, 200, 0.68);
+        line-height: 1.88;
+        margin-bottom: 0.9rem;
+      }
+      .er-pills {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+        margin-top: 1.4rem;
+      }
+      .er-pill {
+        font-size: 0.68rem;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        border: 1px solid rgba(201, 168, 76, 0.28);
+        color: rgba(201, 168, 76, 0.8);
+        padding: 0.26rem 0.72rem;
+        border-radius: 2rem;
+      }
+      .er-links {
+        display: flex;
+        gap: 0.8rem;
+        flex-wrap: wrap;
+        margin-top: 1.6rem;
+      }
+      .er-btn-gold {
+        font-size: 0.78rem;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        border: 1px solid rgba(201, 168, 76, 0.5);
+        color: var(--er-gold);
+        padding: 0.65rem 1.6rem;
+        border-radius: 2rem;
+        text-decoration: none;
+        transition:
+          background 0.2s,
+          color 0.2s;
+      }
+      .er-btn-gold:hover {
+        background: var(--er-gold);
+        color: var(--er-bg);
+      }
+      .er-btn-dim {
+        font-size: 0.78rem;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        color: rgba(230, 221, 200, 0.5);
+        padding: 0.65rem 1.6rem;
+        border-radius: 2rem;
+        text-decoration: none;
+        transition:
+          border-color 0.2s,
+          color 0.2s;
+      }
+      .er-btn-dim:hover {
+        border-color: rgba(201, 168, 76, 0.4);
+        color: rgba(201, 168, 76, 0.8);
+      }
+      .er-stats {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+      }
+      .er-stat {
+        background: rgba(255, 255, 255, 0.04);
+        border: 1px solid rgba(201, 168, 76, 0.13);
+        border-radius: 1.2rem;
+        padding: 1.6rem;
+        transition:
+          border-color 0.2s,
+          background 0.2s;
+      }
+      .er-stat:hover {
+        background: rgba(201, 168, 76, 0.05);
+        border-color: rgba(201, 168, 76, 0.25);
+      }
+      .er-stat-n {
+        font-family: "Cormorant Garamond", serif;
+        font-size: 3rem;
+        font-weight: 300;
+        color: var(--er-gold);
+        line-height: 1;
+      }
+      .er-stat-l {
+        font-size: 0.8rem;
+        color: rgba(230, 221, 200, 0.5);
+        margin-top: 0.3rem;
+        line-height: 1.4;
+      }
+      .er-tl {
+        margin-top: 2rem;
+        border-top: 1px solid rgba(201, 168, 76, 0.12);
+        padding-top: 1.8rem;
+      }
+      .er-tl-title {
+        font-size: 0.66rem;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        color: rgba(201, 168, 76, 0.5);
+        margin-bottom: 1.2rem;
+      }
+      .er-tl-items {
+        display: flex;
+        flex-direction: column;
+        gap: 0.8rem;
+      }
+      .er-tl-item {
+        display: flex;
+        gap: 1rem;
+        font-size: 0.84rem;
+      }
+      .er-tl-year {
+        color: var(--er-gold);
+        font-weight: 400;
+        min-width: 44px;
+        flex-shrink: 0;
+      }
+      .er-tl-text {
+        color: rgba(230, 221, 200, 0.6);
+      }
+      .er-map {
+        margin-top: 1.8rem;
+      }
+      .er-map-label {
+        font-size: 0.72rem;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        color: rgba(201, 168, 76, 0.6);
+        margin-bottom: 0.7rem;
+      }
+      .er-map-frame {
+        border-radius: 0.8rem;
+        overflow: hidden;
+        border: 1px solid rgba(201, 168, 76, 0.15);
+      }
+
+      /* ── FOOTER ── */
+      footer {
+        background: var(--ink);
+        color: rgba(244, 239, 229, 0.4);
+        padding: 2.5rem 5rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 1rem;
+      }
+      .footer-logo {
+        font-family: "Cormorant Garamond", serif;
+        font-size: 1.15rem;
+        color: var(--cream);
+      }
+      .footer-links {
+        display: flex;
+        gap: 1.6rem;
+        list-style: none;
+        flex-wrap: wrap;
+      }
+      .footer-links a {
+        font-size: 0.76rem;
+        color: rgba(244, 239, 229, 0.4);
+        text-decoration: none;
+        letter-spacing: 0.07em;
+        transition: color 0.2s;
+      }
+      .footer-links a:hover {
+        color: var(--cream);
+      }
+      .footer-copy {
+        font-size: 0.74rem;
+      }
+
+      /* ★ BACK TO TOP */
+      .back-to-top {
+        position: fixed;
+        bottom: 2rem;
+        right: 2rem;
+        z-index: 200;
+        width: 44px;
+        height: 44px;
+        border-radius: 50%;
+        background: var(--sage);
+        color: #fff;
+        font-size: 1.1rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 4px 16px rgba(93, 113, 83, 0.35);
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.3s, transform 0.3s, background 0.2s;
+        transform: translateY(8px);
+        text-decoration: none;
+      }
+      .back-to-top.visible {
+        opacity: 1;
+        pointer-events: auto;
+        transform: translateY(0);
+      }
+      .back-to-top:hover {
+        background: var(--sage-l);
+        transform: translateY(-2px);
+      }
+
+      /* ── RESPONSIVE ── */
+      @media (max-width: 1024px) {
+        nav {
+          padding: 1rem 1.5rem;
+        }
+        nav.scrolled {
+          padding: 0.7rem 1.5rem;
+        }
+        .nav-center,
+        .nav-cta {
+          display: none;
+        }
+        .hamburger {
+          display: flex;
+        }
+        .section-pad,
+        #booking,
+        #tools,
+        #familock {
+          padding: 4rem 1.5rem;
+        }
+        .zone-divider {
+          padding: 1rem 1.5rem;
+        }
+        footer {
+          padding: 2rem 1.5rem;
+          flex-direction: column;
+          align-items: flex-start;
+        }
+        #hero {
+          grid-template-columns: 1fr;
+          padding: 7rem 1.5rem 4rem;
+          gap: 2.5rem;
+        }
+        .hero-left {
+          padding-right: 0;
+        }
+        .hero-right {
+          justify-content: flex-start;
+        }
+        .id-card {
+          max-width: 100%;
+        }
+        .edu-wrap,
+        .exp-wrap,
+        .booking-wrap,
+        .familock-wrap,
+        .tools-header {
+          grid-template-columns: 1fr;
+          gap: 2.5rem;
+        }
+        .tools-grid {
+          grid-template-columns: 1fr;
+        }
+        .er-stats {
+          grid-template-columns: 1fr 1fr;
+        }
+        .back-to-top {
+          bottom: 1.2rem;
+          right: 1.2rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- NAV -->
+    <nav id="mainNav">
+      <a href="#hero" class="nav-logo">Łukasz <em>Dyłka</em></a>
+      <ul class="nav-center">
+        <li><a href="#hero">Główna</a></li>
+        <li><a href="#edu">Wykształcenie</a></li>
+        <li><a href="#experience">Doświadczenie</a></li>
+        <li><a href="#tools">Narzędzia</a></li>
+        <li><a href="#booking">Wizyta</a></li>
+        <li><a href="#familock">Familock</a></li>
+      </ul>
+      <a href="#booking" class="nav-cta">Umów wizytę</a>
+      <button class="hamburger" onclick="toggleMenu()" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+
+    <!-- HERO -->
+    <section id="hero">
+      <div class="hero-bg"></div>
+      <div class="hero-blob"></div>
+
+      <div class="hero-left">
+        <p class="hero-eyebrow">Cyfrowa wizytówka · Świętochłowice, Śląsk</p>
+        <h1 class="hero-name">Łukasz<em>Dyłka</em></h1>
+        <div class="hero-roles">
+          <div class="hero-role">
+            <strong>Psycholog</strong> — mgr, spec. Psychoterapia i diagnoza
+            kliniczna
+          </div>
+          <div class="hero-role">
+            <strong>Pedagog</strong> — mgr, ponad 14 lat pracy z ludźmi
+          </div>
+          <div class="hero-role">
+            <strong>Twórca</strong> — Escape Room Familock, narzędzia
+            psychologiczne
+          </div>
+        </div>
+        <div class="hero-buttons">
+          <a href="#booking" class="btn-primary">Umów wizytę</a>
+          <a href="#edu" class="btn-outline">Moje CV ↓</a>
+        </div>
+      </div>
+
+      <div class="hero-right">
+        <div class="id-card">
+          <div class="id-card-top" style="flex-direction:column;align-items:center;text-align:center;gap:0.8rem;">
+            <!--
+              ZDJĘCIE: wrzuć plik do tego samego folderu co o-mnie.html
+              i zmień "zdjecie.jpg" na nazwę swojego pliku.
+            -->
+            <img
+              src="zdjecie.jpg"
+              alt="Łukasz Dyłka"
+              class="id-photo"
+              onerror="this.style.display='none';document.getElementById('photo-fb').style.display='flex';"
+            />
+            <div class="id-photo-fallback" id="photo-fb">ŁD</div>
+            <div>
+              <div class="id-name">Łukasz Dyłka</div>
+              <div class="id-sub">Psycholog &amp; Pedagog · Świętochłowice</div>
+            </div>
+          </div>
+          <div class="id-rows">
+            <div class="id-row">
+              <div class="id-row-label">Aktualne stanowisko</div>
+              <div class="id-row-val">
+                Własna praktyka psychologiczna (online)<br />Psycholog, TME Chorzów<br />Właściciel/twórca Escape Room Familock
+              </div>
+            </div>
+            <div class="id-row">
+              <div class="id-row-label">Wykształcenie</div>
+              <div class="id-row-val">
+                Mgr Psychologii · Akademia Humanitas<br />Mgr Pedagogiki · AJD
+                Częstochowa
+              </div>
+            </div>
+            <div class="id-row">
+              <div class="id-row-label">Kontakt</div>
+              <div class="id-row-val">
+                <a href="mailto:lukaszdylka@gmail.com" style="color: inherit"
+                  >lukaszdylka@gmail.com</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="id-tags">
+            <span class="id-tag">Psychoterapia</span>
+            <span class="id-tag">ASD</span>
+            <span class="id-tag">Tyflopedagogika</span>
+            <span class="id-tag">Escape Room</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- STREFA ZAWODOWA -->
+    <div class="zone-divider">
+      <div class="zone-divider-line"></div>
+      <span class="zone-divider-label" style="display:flex;align-items:center;gap:0.5rem;">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22V12"/><path d="M12 12C12 7 7 4 2 6c3 3 5 6 10 6z"/><path d="M12 12c0-5 5-8 10-6-3 3-5 6-10 6z"/></svg>
+        Strefa zawodowa
+      </span>
+      <div class="zone-divider-line"></div>
+    </div>
+
+    <!-- WYKSZTAŁCENIE -->
+    <section id="edu" class="section-pad">
+      <div class="edu-wrap">
+        <div>
+          <p class="s-eyebrow">Wykształcenie</p>
+          <h2 class="s-title">Solidny fundament<br /><em>wiedzy</em></h2>
+          <p class="s-body edu-intro">
+            Psychologia to mój drugi kierunek — do magistra z pedagogiki
+            dołożyłem dyplom z psychologii, kilka specjalizacji podyplomowych i
+            lata praktyki. Łączę perspektywę pedagogiczną z psychologiczną, co
+            rzadko idzie w parze.
+          </p>
+        </div>
+        <div>
+          <div class="degree-group">
+            <div class="degree-group-title">Psychologiczne</div>
+            <div class="degree-cards">
+              <div class="degree-card degree-main">
+                <div>
+                  <div class="degree-title">Magister Psychologii</div>
+                  <div class="degree-school">
+                    Akademia Humanitas · Psychoterapia i kliniczna diagnoza
+                    psychologiczna
+                  </div>
+                </div>
+                <div class="degree-year">2025</div>
+              </div>
+            </div>
+          </div>
+          <div class="degree-group">
+            <div class="degree-group-title">Pedagogiczne</div>
+            <div class="degree-cards">
+              <div class="degree-card degree-main">
+                <div>
+                  <div class="degree-title">Magister Pedagogiki</div>
+                  <div class="degree-school">
+                    Akademia Jana Długosza · Pedagogika opiekuńczo-wychowawcza i
+                    resocjalizacyjna
+                  </div>
+                </div>
+                <div class="degree-year">2013</div>
+              </div>
+              <div class="degree-card">
+                <div>
+                  <div class="degree-title">Licencjat Pedagogiki</div>
+                  <div class="degree-school">
+                    Kolegium Nauczycielskie w Bytomiu
+                  </div>
+                </div>
+                <div class="degree-year">2010</div>
+              </div>
+            </div>
+          </div>
+          <div class="degree-group">
+            <div class="degree-group-title">Specjalizacje podyplomowe</div>
+            <div class="degree-cards">
+              <div class="degree-card">
+                <div>
+                  <div class="degree-title">Tyflopedagogika</div>
+                  <div class="degree-school">
+                    WSKZ Wrocław · Edukacja i rehabilitacja osób z
+                    niepełnosprawnością wzrokową
+                  </div>
+                </div>
+                <div class="degree-year">2022</div>
+              </div>
+              <div class="degree-card">
+                <div>
+                  <div class="degree-title">Terapia spektrum autyzmu (ASD)</div>
+                  <div class="degree-school">WSB Poznań (o. Chorzów)</div>
+                </div>
+                <div class="degree-year">2020</div>
+              </div>
+              <div class="degree-card">
+                <div>
+                  <div class="degree-title">Oligofrenopedagogika</div>
+                  <div class="degree-school">
+                    Pedagogium · Edukacja i rehabilitacja osób z
+                    niepełnosprawnością intelektualną
+                  </div>
+                </div>
+                <div class="degree-year">2020</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- DOŚWIADCZENIE -->
+    <section
+      id="experience"
+      class="section-pad"
+      style="background: var(--cream)"
+    >
+      <div class="exp-wrap">
+        <div>
+          <p class="s-eyebrow">Doświadczenie zawodowe</p>
+          <h2 class="s-title">
+            Praca z&nbsp;<em>ludźmi</em><br />od 2010 roku
+          </h2>
+          <p class="s-body exp-intro-body">
+            Zaczynałem jako wychowawca w placówce socjalizacyjnej. Przez lata
+            pracowałem ze szczególnymi grupami — dziećmi z ASD,
+            niepełnosprawnościami wzrokowymi i intelektualnymi. Dziś prowadzę
+            własną praktykę psychologiczną.
+          </p>
+          <a
+            href="https://www.canva.com/design/DAHAiDl2_9M/WSivs2FOaUSx_43hBfPnnQ/view"
+            target="_blank"
+            rel="noopener"
+            class="exp-cv-btn"
+          >
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+            Pełne CV →
+          </a>
+        </div>
+        <div class="exp-timeline">
+          <div class="tl-item tl-now">
+            <p class="tl-year">luty 2026 — teraz</p>
+            <p class="tl-title">Własna praktyka psychologiczna</p>
+            <p class="tl-where">Sesje online</p>
+            <span class="tl-badge">aktualnie</span>
+          </div>
+          <div class="tl-item tl-now">
+            <p class="tl-year">2023 — teraz</p>
+            <p class="tl-title">Familock — własna firma</p>
+            <p class="tl-where">
+              Escape Room · Świętochłowice, ul. Cmentarna 5/3
+            </p>
+            <span class="tl-badge">aktualnie</span>
+          </div>
+          <div class="tl-item tl-now">
+            <p class="tl-year">2026 — teraz</p>
+            <p class="tl-title">Psycholog szkolny</p>
+            <p class="tl-where">
+              Technikum Mechaniczno-Elektryczne im. Nikoli Tesli w Chorzowie
+            </p>
+            <span class="tl-badge">aktualnie</span>
+          </div>
+          <div class="tl-item">
+            <p class="tl-year">2024 — 2026</p>
+            <p class="tl-title">Pedagog szkolny &amp; terapeuta</p>
+            <p class="tl-where">
+              Technikum Mechaniczno-Elektryczne im. Nikoli Tesli w Chorzowie
+            </p>
+          </div>
+          <div class="tl-item">
+            <p class="tl-year">2020 — 2024</p>
+            <p class="tl-title">
+              Nauczyciel współorganizujący, socjoterapeuta, tyflopedagog
+            </p>
+            <p class="tl-where">
+              SP z Oddziałami Integracyjnymi nr 21 im. H. Sienkiewicza, Gliwice
+            </p>
+          </div>
+          <div class="tl-item">
+            <p class="tl-year">2019 — 2020</p>
+            <p class="tl-title">Nauczyciel świetlicy &amp; rewalidator</p>
+            <p class="tl-where">
+              SP z Oddziałami Integracyjnymi nr 21, Gliwice
+            </p>
+          </div>
+          <div class="tl-item">
+            <p class="tl-year">2012 — 2019</p>
+            <p class="tl-title">Wychowawca</p>
+            <p class="tl-where">
+              Placówka socjalizacyjna Ośrodka św. Elżbiety, Ruda Śląska
+            </p>
+          </div>
+          <div class="tl-item">
+            <p class="tl-year">2010 — 2011</p>
+            <p class="tl-title">Wychowawca świetlicy środowiskowej</p>
+            <p class="tl-where">Ośrodek Bł. Jana Pawła II, Nowy Bytom</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- NARZĘDZIA -->
+    <section id="tools" class="section-pad">
+      <div class="tools-header">
+        <div>
+          <p class="s-eyebrow">Narzędzia psychologiczne</p>
+          <h2 class="s-title">Aplikacje do pracy<br />nad <em>sobą</em></h2>
+        </div>
+        <p class="s-body">
+          Narzędzia, które stworzyłem — możesz z nich korzystać samodzielnie
+          między sesjami lub jako codzienne wsparcie samorozwoju.
+        </p>
+      </div>
+      <div class="tools-grid">
+        <a
+          href="https://moja-przestrzen.netlify.app"
+          target="_blank"
+          rel="noopener"
+          class="tool-card"
+        >
+          <div class="tool-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--sage)" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22V12"/><path d="M12 12C12 7 7 4 2 6c3 3 5 6 10 6z"/><path d="M12 12c0-5 5-8 10-6-3 3-5 6-10 6z"/></svg>
+          </div>
+          <p class="tool-name">Moja Przestrzeń</p>
+          <p class="tool-desc">
+            Miejsce do refleksji i zatrzymania się. Pomaga rozumieć własne
+            emocje krok po kroku, bez pośpiechu.
+          </p>
+          <span class="tool-link">Otwórz aplikację</span>
+        </a>
+        <a
+          href="https://dzennik-swit.netlify.app"
+          target="_blank"
+          rel="noopener"
+          class="tool-card"
+        >
+          <div class="tool-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--sage)" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v2M4.93 4.93l1.41 1.41M2 12h2M4.93 19.07l1.41-1.41M12 20v-2"/><path d="M7 17A5 5 0 0 1 12 8a5 5 0 0 1 5 9"/><line x1="2" y1="20" x2="22" y2="20"/></svg>
+          </div>
+          <p class="tool-name">Dziennik Świt</p>
+          <p class="tool-desc">
+            Dziennik poranny wspierający zdrowe nawyki myślowe. Zacznij dzień z
+            intencją i klarownością.
+          </p>
+          <span class="tool-link">Otwórz aplikację</span>
+        </a>
+        <div class="tool-card tool-ghost">
+          <div class="tool-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--sage)" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          </div>
+          <p class="tool-name">Wkrótce</p>
+          <p class="tool-desc">
+            Pracuję nad kolejnymi narzędziami. Napisz, jeśli chcesz być pierwszą
+            osobą, która je wypróbuje.
+          </p>
+          <a
+            href="mailto:lukaszdylka@gmail.com?subject=Nowe narzędzia"
+            class="tool-link"
+            style="text-decoration: none; cursor: pointer"
+            >Daj mi znać</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <!-- WIZYTA -->
+    <section id="booking" class="section-pad" style="background: var(--cream)">
+      <div class="booking-wrap">
+        <div>
+          <p class="s-eyebrow">Umów wizytę</p>
+          <h2 class="s-title">Zacznijmy<br /><em>razem</em></h2>
+          <p class="s-body booking-body">
+            Pierwsza rozmowa to zawsze krok w dobrą stronę. Prowadzę sesje
+            wyłącznie online — w bezpiecznej, pełnej szacunku przestrzeni, w
+            Twoim tempie.
+          </p>
+          <div class="contact-list">
+            <div class="contact-item">
+              <span class="contact-icon">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+              </span><span>Sesje wyłącznie online — video lub telefon</span>
+            </div>
+            <div class="contact-item">
+              <span class="contact-icon">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              </span><span>Poniedziałki, godziny zgodnie z terminarzem</span>
+            </div>
+            <div class="contact-item">
+              <span class="contact-icon">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+              </span><span><a href="mailto:lukaszdylka@gmail.com" style="color: inherit">lukaszdylka@gmail.com</a></span>
+            </div>
+          </div>
+          <div class="social-row">
+            <a
+              href="https://www.facebook.com/lukaszdylka"
+              target="_blank"
+              rel="noopener"
+              class="soc-pill"
+              >Facebook</a
+            >
+            <a
+              href="https://www.instagram.com/dylka.lukasz"
+              target="_blank"
+              rel="noopener"
+              class="soc-pill"
+              >Instagram</a
+            >
+            <a
+              href="https://www.linkedin.com/in/lukaszdylka/"
+              target="_blank"
+              rel="noopener"
+              class="soc-pill"
+              >LinkedIn</a
+            >
+          </div>
+        </div>
+        <div class="widget-box">
+          <!--
+        WIDGET TWOJPSYCHOLOG.PL
+        Wklej tu kod z panelu: Panel → Ustawienia → Widget
+        Przykład iframe:
+        <iframe src="https://twojpsycholog.pl/wizyta/TWOJ_ID"
+          width="100%" height="480" frameborder="0"
+          style="border:none;border-radius:1rem;"></iframe>
+      -->
+          <div
+            id="twoj-psycholog-widget"
+            data-twoj-psycholog-therapist-id="8917"
+            data-twoj-psycholog-variant="simple"
+            data-twoj-psycholog-button-background="#5d7153"
+            data-twoj-psycholog-horizontal="true"
+          ></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- STREFA HOBBY -->
+    <div
+      class="zone-divider"
+      style="
+        background: var(--er-bg);
+        border-top: 1px solid rgba(201, 168, 76, 0.1);
+      "
+    >
+      <div
+        class="zone-divider-line"
+        style="background: rgba(201, 168, 76, 0.15)"
+      ></div>
+      <span
+        class="zone-divider-label"
+        style="
+          border-color: rgba(201, 168, 76, 0.25);
+          color: rgba(201, 168, 76, 0.7);
+          background: rgba(201, 168, 76, 0.05);
+        "
+        style="display:flex;align-items:center;gap:0.5rem;">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+        Strefa hobby &amp; firma
+      </span>
+      <div
+        class="zone-divider-line"
+        style="background: rgba(201, 168, 76, 0.15)"
+      ></div>
+    </div>
+
+    <!-- FAMILOCK -->
+    <section id="familock">
+      <div class="er-ambient"></div>
+      <div class="er-grid-lines"></div>
+      <div class="familock-wrap">
+        <div>
+          <p class="er-eyebrow">Escape Room · własna firma · Świętochłowice</p>
+          <h2 class="er-title">
+            <em>Familock</em><br />pokój zagadek<br />z pasji
+          </h2>
+          <p class="er-body">
+            Escape roomy weszły w moje życie jako jednorazowy wypad z żoną — i
+            zostały na dobre. Z biegiem czasu stworzyłem własny pokój jako
+            prezent urodzinowy, który dzięki Polak Potrafi przerodził się w
+            prawdziwy projekt.
+          </p>
+          <p class="er-body">
+            W 2023 roku założyłem firmę
+            <strong style="color: #f0e6cc">Familock</strong>, a w 2026
+            otworzyłem escape room dla klientów przy ul. Cmentarnej 5/3 w
+            Świętochłowicach. Z żoną tworzymy też grupę
+            <strong style="color: #f0e6cc">Zicherki</strong>
+            i pomagamy innym twórcom budować fabułę, zagadki i wystrój.
+          </p>
+          <div class="er-pills">
+            <span class="er-pill">Właściciel firmy</span>
+            <span class="er-pill">Projektant zagadek</span>
+            <span class="er-pill">Zicherki</span>
+            <span class="er-pill">300+ pokojów</span>
+          </div>
+          <div class="er-links">
+            <a
+              href="https://familock.pl"
+              target="_blank"
+              rel="noopener"
+              class="er-btn-gold"
+              >familock.pl →</a
+            >
+            <a
+              href="https://zicherki.pl"
+              target="_blank"
+              rel="noopener"
+              class="er-btn-dim"
+              >Zicherki →</a
+            >
+          </div>
+          <div class="er-tl">
+            <div class="er-tl-title">Historia</div>
+            <div class="er-tl-items">
+              <div class="er-tl-item">
+                <span class="er-tl-year">2026</span
+                ><span class="er-tl-text"
+                  >Otwarcie escape roomu Familock dla klientów</span
+                >
+              </div>
+              <div class="er-tl-item">
+                <span class="er-tl-year">2023</span
+                ><span class="er-tl-text"
+                  >Założenie firmy, Świętochłowice ul. Cmentarna 5/3</span
+                >
+              </div>
+              <div class="er-tl-item">
+                <span class="er-tl-year">2022</span
+                ><span class="er-tl-text"
+                  >Budowa pierwszego prywatnego pokoju (Polak Potrafi)</span
+                >
+              </div>
+              <div class="er-tl-item">
+                <span class="er-tl-year">~2018</span
+                ><span class="er-tl-text"
+                  >Pierwszy escape room — i obsesja na całe życie</span
+                >
+              </div>
+            </div>
+          </div>
+          <div class="er-map">
+            <div class="er-map-label" style="display:flex;align-items:center;gap:0.4rem;">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              Świętochłowice, ul. Cmentarna 5/3
+            </div>
+            <div class="er-map-frame">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2549.2329188023696!2d18.9254565768377!3d50.28757989907718!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4716cd7ecd838ee1%3A0xacfb293724d4d9d6!2sFamilock%20Escape%20Room!5e0!3m2!1spl!2spl!4v1772400612440!5m2!1spl!2spl"
+                width="100%"
+                height="200"
+                style="
+                  border: 0;
+                  border-radius: 0.8rem;
+                  filter: invert(90%) hue-rotate(180deg) saturate(0.6);
+                "
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+              >
+              </iframe>
+            </div>
+          </div>
+        </div>
+        <div class="er-stats">
+          <div class="er-stat">
+            <div class="er-stat-n">2023</div>
+            <div class="er-stat-l">założenie firmy Familock</div>
+          </div>
+          <div class="er-stat">
+            <div class="er-stat-n">2026</div>
+            <div class="er-stat-l">otwarcie escape roomu dla klientów</div>
+          </div>
+          <div class="er-stat">
+            <div class="er-stat-n">300+</div>
+            <div class="er-stat-l">odwiedzonych pokojów zagadek</div>
+          </div>
+          <div class="er-stat">
+            <div class="er-stat-n" style="display:flex;align-items:center;padding-top:0.4rem;">
+              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="var(--er-gold)" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="6" r="2.5"/><circle cx="16" cy="7" r="2"/><path d="M5 20v-3a4 4 0 0 1 4-4h2a4 4 0 0 1 4 4v3"/><path d="M18 20v-2a3 3 0 0 0-2-2.83"/><circle cx="9" cy="17" r="1"/></svg>
+            </div>
+            <div class="er-stat-l">stworzony dla rodzin i przyjaciół</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+      <div class="footer-logo">Łukasz Dyłka</div>
+      <ul class="footer-links">
+        <li><a href="https://familock.pl" target="_blank">Familock</a></li>
+        <li>
+          <a href="https://zicherki.pl" target="_blank">Zicherki</a>
+        </li>
+        <li>
+          <a href="https://www.facebook.com/lukaszdylka" target="_blank"
+            >Facebook</a
+          >
+        </li>
+        <li>
+          <a href="https://www.instagram.com/dylka.lukasz" target="_blank"
+            >Instagram</a
+          >
+        </li>
+        <li>
+          <a href="https://www.linkedin.com/in/lukaszdylka/" target="_blank"
+            >LinkedIn</a
+          >
+        </li>
+        <li><a href="mailto:lukaszdylka@gmail.com">E-mail</a></li>
+      </ul>
+      <p class="footer-copy">© 2026 Łukasz Dyłka</p>
+    </footer>
+
+    <!-- ★ PRZYCISK DO GÓRY -->
+    <a href="#hero" class="back-to-top" id="backToTop" aria-label="Wróć na górę">↑</a>
+
+    <script>
+      // Nav shrink on scroll
+      const nav = document.getElementById("mainNav");
+      const backToTop = document.getElementById("backToTop");
+
+      window.addEventListener(
+        "scroll",
+        function () {
+          nav.classList.toggle("scrolled", window.scrollY > 50);
+          backToTop.classList.toggle("visible", window.scrollY > 400); // ★
+        },
+        { passive: true },
+      );
+
+      // Active nav link
+      const sections = document.querySelectorAll("section[id]");
+      const navLinks = document.querySelectorAll(".nav-center a");
+      window.addEventListener(
+        "scroll",
+        function () {
+          var cur = "";
+          sections.forEach(function (s) {
+            if (window.scrollY >= s.offsetTop - 120) cur = s.id;
+          });
+          navLinks.forEach(function (a) {
+            a.classList.toggle("active", a.getAttribute("href") === "#" + cur);
+          });
+        },
+        { passive: true },
+      );
+
+      // Mobile menu
+      var menuOpen = false;
+      function toggleMenu() {
+        menuOpen = !menuOpen;
+        var links = document.querySelector(".nav-center");
+        var cta = document.querySelector(".nav-cta");
+        if (menuOpen) {
+          links.style.cssText =
+            "display:flex;flex-direction:column;gap:0;position:fixed;top:64px;left:0;right:0;background:var(--white);padding:1rem;z-index:299;box-shadow:0 12px 32px rgba(0,0,0,.1);border-radius:0 0 1rem 1rem;align-items:stretch";
+          links.querySelectorAll("a").forEach(function (a) {
+            a.style.cssText =
+              "border-radius:.6rem;text-align:center;padding:.7rem 1rem";
+          });
+          cta.style.cssText =
+            "display:block;margin:0 1rem 1rem;text-align:center";
+        } else {
+          links.removeAttribute("style");
+          links.querySelectorAll("a").forEach(function (a) {
+            a.removeAttribute("style");
+          });
+          cta.removeAttribute("style");
+        }
+      }
+    </script>
+    <script src="https://twojpsycholog.pl/static/widget/static/js/twoj-psycholog-widget.js"></script>
+  </body>
+</html>
