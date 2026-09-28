@@ -9,7 +9,7 @@
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌿</text></svg>" />
 
     <!-- ★ SEO & OPEN GRAPH -->
-    <meta name="description" content="Łukasz Dyłka — psycholog i pedagog ze Świętochłowic. Sesje psychologiczne online. Magister psychologii i pedagogiki, spec. psychoterapia i diagnoza kliniczna. Umów wizytę." />
+    <meta name="description" content="Łukasz Dyłka — psycholog szkolny i pedagog z ponad 15-letnim doświadczeniem. Konsultacje psychologiczne online, wsparcie dzieci, młodzieży i rodziców. Twórca Familock i projektu Nawigator." />
     <meta name="author" content="Łukasz Dyłka" />
     <meta name="robots" content="index, follow" />
     <meta property="og:type" content="website" />
@@ -39,14 +39,14 @@
       }
 
       :root {
-        --ink: #1a1d16;
-        --sage: #5d7153;
-        --sage-l: #7a9470;
-        --sage-pale: #e8f0e4;
-        --cream: #f3ede2;
-        --warm: #ebe3d2;
-        --muted: #787268;
-        --white: #fdfaf4;
+        --ink: #171b16;
+        --sage: #50664d;
+        --sage-l: #6f8969;
+        --sage-pale: #dce5d8;
+        --cream: #e9e4da;
+        --warm: #ddd6c9;
+        --muted: #696961;
+        --white: #f3f1eb;
         --er-bg: #18191a;
         --er-gold: #c9a84c;
         --er-gold-l: #e0c278;
@@ -76,7 +76,7 @@
         align-items: center;
         justify-content: space-between;
         padding: 1rem 5rem;
-        background: rgba(253, 250, 244, 0.93);
+        background: rgba(243, 241, 235, 0.95);
         backdrop-filter: blur(16px);
         border-bottom: 1px solid rgba(93, 113, 83, 0.12);
         transition:
@@ -739,12 +739,14 @@
 
       /* ── WIZYTA ── */
       #booking {
-        background: var(--white);
+        background: var(--cream);
+        border-top: 1px solid rgba(80, 102, 77, 0.12);
+        border-bottom: 1px solid rgba(80, 102, 77, 0.12);
       }
       .booking-wrap {
         display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 5rem;
+        grid-template-columns: minmax(280px, 0.72fr) minmax(520px, 1.28fr);
+        gap: 3rem;
         align-items: start;
       }
       .booking-body {
@@ -797,16 +799,18 @@
         color: #fff;
       }
       .widget-box {
-        background: var(--cream);
+        background: var(--white);
         border-radius: 1.5rem;
-        padding: 3rem;
-        min-height: 320px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-        border: 1px solid rgba(93, 113, 83, 0.12);
+        padding: 1rem;
+        min-height: 520px;
+        width: 100%;
+        overflow: hidden;
+        border: 1px solid rgba(80, 102, 77, 0.16);
+        box-shadow: 0 18px 50px rgba(23, 27, 22, 0.07);
+      }
+      #twoj-psycholog-widget {
+        width: 100%;
+        min-height: 480px;
       }
       .widget-ico {
         font-size: 2.2rem;
@@ -1530,22 +1534,22 @@
           </p>
           <span class="tool-link">Otwórz aplikację</span>
         </a>
-        <div class="tool-card tool-ghost">
+        <a
+          href="https://terapianawigator.pl"
+          target="_blank"
+          rel="noopener"
+          class="tool-card"
+        >
           <div class="tool-icon">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--sage)" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--sage)" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="m15.5 8.5-2 5-5 2 2-5 5-2z"/></svg>
           </div>
-          <p class="tool-name">Wkrótce</p>
+          <p class="tool-name">Nawigator</p>
           <p class="tool-desc">
-            Pracuję nad kolejnymi narzędziami. Napisz, jeśli chcesz być pierwszą
-            osobą, która je wypróbuje.
+            Moja przestrzeń zawodowa poświęcona konsultacjom psychologicznym
+            online dla dzieci, młodzieży i rodziców.
           </p>
-          <a
-            href="mailto:lukaszdylka@gmail.com?subject=Nowe narzędzia"
-            class="tool-link"
-            style="text-decoration: none; cursor: pointer"
-            >Daj mi znać</a
-          >
-        </div>
+          <span class="tool-link">Przejdź do Nawigatora</span>
+        </a>
       </div>
     </section>
 
@@ -1556,9 +1560,8 @@
           <p class="s-eyebrow">Umów wizytę</p>
           <h2 class="s-title">Zacznijmy<br /><em>razem</em></h2>
           <p class="s-body booking-body">
-            Pierwsza rozmowa to zawsze krok w dobrą stronę. Prowadzę sesje
-            wyłącznie online — w bezpiecznej, pełnej szacunku przestrzeni, w
-            Twoim tempie.
+            Prowadzę konsultacje psychologiczne online. W kalendarzu obok
+            możesz od razu sprawdzić dostępne godziny i wybrać konkretny termin.
           </p>
           <div class="contact-list">
             <div class="contact-item">
@@ -1569,7 +1572,7 @@
             <div class="contact-item">
               <span class="contact-icon">
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-              </span><span>Poniedziałki, godziny zgodnie z terminarzem</span>
+              </span><span>Dostępne godziny są aktualizowane na bieżąco w kalendarzu</span>
             </div>
             <div class="contact-item">
               <span class="contact-icon">
@@ -1613,8 +1616,12 @@
           <div
             id="twoj-psycholog-widget"
             data-twoj-psycholog-therapist-id="8917"
-            data-twoj-psycholog-variant="simple"
-            data-twoj-psycholog-button-background="#5d7153"
+            data-twoj-psycholog-variant="full"
+            data-twoj-psycholog-return-url="https://dylka.pl/#booking"
+            data-twoj-psycholog-top-background="#50664d"
+            data-twoj-psycholog-top-text-color="#f3f1eb"
+            data-twoj-psycholog-button-background="#50664d"
+            data-twoj-psycholog-button-text-color="#ffffff"
             data-twoj-psycholog-horizontal="true"
           ></div>
         </div>
@@ -1678,7 +1685,7 @@
             <span class="er-pill">Właściciel firmy</span>
             <span class="er-pill">Projektant zagadek</span>
             <span class="er-pill">Zicherki</span>
-            <span class="er-pill">300+ pokojów</span>
+            <span class="er-pill">318 pokojów</span>
           </div>
           <div class="er-links">
             <a
@@ -1758,14 +1765,12 @@
             <div class="er-stat-l">otwarcie escape roomu dla klientów</div>
           </div>
           <div class="er-stat">
-            <div class="er-stat-n">300+</div>
+            <div class="er-stat-n">318</div>
             <div class="er-stat-l">odwiedzonych pokojów zagadek</div>
           </div>
           <div class="er-stat">
-            <div class="er-stat-n" style="display:flex;align-items:center;padding-top:0.4rem;">
-              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="var(--er-gold)" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="6" r="2.5"/><circle cx="16" cy="7" r="2"/><path d="M5 20v-3a4 4 0 0 1 4-4h2a4 4 0 0 1 4 4v3"/><path d="M18 20v-2a3 3 0 0 0-2-2.83"/><circle cx="9" cy="17" r="1"/></svg>
-            </div>
-            <div class="er-stat-l">stworzony dla rodzin i przyjaciół</div>
+            <div class="er-stat-n">4</div>
+            <div class="er-stat-l">autorskie scenariusze i projekty pokoi</div>
           </div>
         </div>
       </div>
