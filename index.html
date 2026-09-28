@@ -39,18 +39,18 @@
       }
 
       :root {
-        --ink: #171b16;
-        --sage: #50664d;
-        --sage-l: #6f8969;
-        --sage-pale: #dce5d8;
-        --cream: #e9e4da;
-        --warm: #ddd6c9;
-        --muted: #696961;
-        --white: #f3f1eb;
-        --er-bg: #18191a;
-        --er-gold: #c9a84c;
-        --er-gold-l: #e0c278;
-        --accent: #9e7d52;
+        --ink: #171814;
+        --sage: #465649;
+        --sage-l: #68786a;
+        --sage-pale: #cfd6cb;
+        --cream: #ddd5c8;
+        --warm: #cec4b5;
+        --muted: #65645d;
+        --white: #e9e3d9;
+        --er-bg: #171716;
+        --er-gold: #b79458;
+        --er-gold-l: #d0b277;
+        --accent: #8d6b47;
       }
 
       html {
@@ -76,7 +76,7 @@
         align-items: center;
         justify-content: space-between;
         padding: 1rem 5rem;
-        background: rgba(243, 241, 235, 0.95);
+        background: rgba(233, 227, 217, 0.96);
         backdrop-filter: blur(16px);
         border-bottom: 1px solid rgba(93, 113, 83, 0.12);
         transition:
@@ -171,7 +171,7 @@
         grid-template-columns: 1fr 1fr;
         align-items: center;
         padding: 8rem 5rem 5rem;
-        background: var(--white);
+        background: linear-gradient(145deg, #e4ddd1 0%, #d8d0c3 100%);
         position: relative;
         overflow: hidden;
       }
@@ -318,7 +318,7 @@
         justify-content: center;
       }
       .id-card {
-        background: var(--warm);
+        background: #d1c7b7;
         border-radius: 2rem;
         padding: 2.5rem;
         width: 100%;
@@ -467,7 +467,7 @@
 
       /* ── WYKSZTAŁCENIE ── */
       #edu {
-        background: var(--cream);
+        background: #d8d0c4;
       }
       .edu-wrap {
         display: grid;
@@ -537,7 +537,7 @@
 
       /* ── DOŚWIADCZENIE ── */
       #experience {
-        background: var(--white);
+        background: #e6e0d6;
       }
       .exp-wrap {
         display: grid;
@@ -635,7 +635,7 @@
 
       /* ── NARZĘDZIA ── */
       #tools {
-        background: var(--sage-pale);
+        background: #cbd2c7;
       }
       .tools-header {
         display: grid;
@@ -739,9 +739,9 @@
 
       /* ── WIZYTA ── */
       #booking {
-        background: var(--cream);
-        border-top: 1px solid rgba(80, 102, 77, 0.12);
-        border-bottom: 1px solid rgba(80, 102, 77, 0.12);
+        background: #d7cfc2;
+        border-top: 1px solid rgba(70, 86, 73, 0.16);
+        border-bottom: 1px solid rgba(70, 86, 73, 0.16);
       }
       .booking-wrap {
         display: grid;
@@ -799,7 +799,7 @@
         color: #fff;
       }
       .widget-box {
-        background: var(--white);
+        background: #eee8de;
         border-radius: 1.5rem;
         padding: 1rem;
         min-height: 520px;
@@ -1227,24 +1227,23 @@
       <div class="hero-blob"></div>
 
       <div class="hero-left">
-        <p class="hero-eyebrow">Cyfrowa wizytówka · Świętochłowice, Śląsk</p>
+        <p class="hero-eyebrow">Psycholog · pedagog · konsultacje online</p>
         <h1 class="hero-name">Łukasz<em>Dyłka</em></h1>
         <div class="hero-roles">
           <div class="hero-role">
-            <strong>Psycholog</strong> — mgr, spec. Psychoterapia i diagnoza
-            kliniczna
+            <strong>Psycholog dzieci i młodzieży</strong> — konsultacje online
           </div>
           <div class="hero-role">
-            <strong>Pedagog</strong> — mgr, ponad 15 lat pracy z ludźmi
+            <strong>Psycholog szkolny i pedagog</strong> — ponad 15 lat doświadczenia
           </div>
           <div class="hero-role">
-            <strong>Twórca</strong> — Familock, Nawigator i narzędzia
-            psychologiczne
+            <strong>Wsparcie rodziców</strong> — trudności emocjonalne, szkolne i społeczne
           </div>
         </div>
         <div class="hero-buttons">
-          <a href="#booking" class="btn-primary">Umów wizytę</a>
-          <a href="#edu" class="btn-outline">Moje CV ↓</a>
+          <a href="#booking" class="btn-primary">Wybierz termin</a>
+          <a href="https://terapianawigator.pl" target="_blank" rel="noopener" class="btn-outline">Nawigator</a>
+          <a href="#experience" class="btn-outline">Doświadczenie ↓</a>
         </div>
       </div>
 
@@ -1264,14 +1263,14 @@
             <div class="id-photo-fallback" id="photo-fb">ŁD</div>
             <div>
               <div class="id-name">Łukasz Dyłka</div>
-              <div class="id-sub">Psycholog &amp; Pedagog · Świętochłowice</div>
+              <div class="id-sub">Psycholog dzieci i młodzieży · online</div>
             </div>
           </div>
           <div class="id-rows">
             <div class="id-row">
               <div class="id-row-label">Aktualne stanowisko</div>
               <div class="id-row-val">
-                Własna praktyka psychologiczna (online)<br />Psycholog, TME Chorzów<br />Właściciel/twórca Escape Room Familock
+                Konsultacje psychologiczne online<br />Psycholog, TME Chorzów<br />Twórca projektu Nawigator
               </div>
             </div>
             <div class="id-row">
@@ -1497,8 +1496,9 @@
           <h2 class="s-title">Aplikacje do pracy<br />nad <em>sobą</em></h2>
         </div>
         <p class="s-body">
-          Narzędzia, które stworzyłem — możesz z nich korzystać samodzielnie
-          między sesjami lub jako codzienne wsparcie samorozwoju.
+          Tu zbieram własne projekty związane z psychologią. Nawigator jest
+          moją główną przestrzenią konsultacyjną, a pozostałe narzędzia mogą
+          wspierać pracę między spotkaniami.
         </p>
       </div>
       <div class="tools-grid">
@@ -1554,14 +1554,15 @@
     </section>
 
     <!-- WIZYTA -->
-    <section id="booking" class="section-pad" style="background: var(--cream)">
+    <section id="booking" class="section-pad">
       <div class="booking-wrap">
         <div>
           <p class="s-eyebrow">Umów wizytę</p>
           <h2 class="s-title">Zacznijmy<br /><em>razem</em></h2>
           <p class="s-body booking-body">
-            Prowadzę konsultacje psychologiczne online. W kalendarzu obok
-            możesz od razu sprawdzić dostępne godziny i wybrać konkretny termin.
+            Prowadzę konsultacje psychologiczne online dla dzieci, młodzieży
+            i rodziców. W kalendarzu obok możesz od razu sprawdzić dostępne
+            godziny i wybrać konkretny termin.
           </p>
           <div class="contact-list">
             <div class="contact-item">
@@ -1780,6 +1781,7 @@
     <footer>
       <div class="footer-logo">Łukasz Dyłka</div>
       <ul class="footer-links">
+        <li><a href="https://terapianawigator.pl" target="_blank">Nawigator</a></li>
         <li><a href="https://familock.pl" target="_blank">Familock</a></li>
         <li>
           <a href="https://zicherki.pl" target="_blank">Zicherki</a>
